@@ -1,0 +1,110 @@
+// ~/.config/waybar/config.jsonc
+//second commit (no supe ponerle en el primero que hize)
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 0,
+    "modules-left": [
+        "clock",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "tray",
+        "network",
+        "pulseaudio",
+       // "memory",
+        "cpu",
+        "battery",
+        "backlight",
+        "bluetooth"
+    ],
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{id}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+	"clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %d de %B de %Y}"
+	},
+ 	   "battery": {
+        "states": {
+            "good": 85,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+   "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "default": ["", "", ""]
+        }
+    },
+    "network": {
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        "on-click": "nm-connection-editor"
+    },
+    "memory": {
+        "format": " {}%"
+  },
+    "cpu": {
+       "format": " {usage}%"
+    },
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "󰂲", 
+    "format-connected": " {device_alias}", 
+    "tooltip-format": "{device_alias} ({device_address})",
+    "tooltip-format-connected": " {device_alias}\n󰋊 {device_battery_percentage}%", 
+    "on-click": "blueman-manager", // Abre el gestor de Bluetooth al hacer clic derecho, el izquierdo lo cierra XD
+    "on-click-right": "rfkill toggle bluetooth" // Activa/desactiva el Bluetooth con clic derecho
+},
+"appmenu": {
+  "format": "󰻀",
+  "on-click": "wofi --show drun", // Comando para lanzar wofi
+  "tooltip": "Lanzador de aplicaciones"
+}
+}

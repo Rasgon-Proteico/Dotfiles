@@ -1,0 +1,58 @@
+{
+  "logo": {
+    "source": "/home/rasgon/Descargas/Casco.jpg",
+    "height": 18
+  },
+  "display": {
+    "separator": " : "
+  },
+  "modules": [
+    "title",
+    "separator",
+    {
+      "type": "OS",
+      "key": "os",
+      "format": "{/name} {/version}"
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel"
+    },
+    {
+      "type": "host",
+      "key": "Host"
+    },
+    {
+      "type": "uptime",
+      "key": "Uptime"
+    },
+    {
+      "type": "packages",
+      "key": "Paquetes"
+    },
+    "wm",
+    "de",
+    "terminal",
+    "shell",
+    {
+      "type": "cpu",
+      "key": "CPU"
+    },
+    {
+      "type": "gpu",
+      "key": "GPU"
+    },
+    {
+      "type": "memory",
+      "key": "RAM"
+    },
+{
+      "type": "display",
+      "key": "Pantalla",
+      "format": "{width}x{height} @ {refresh-rate}Hz"
+    },
+    "disk",
+    "break",
+    "colors"
+  ]
+}

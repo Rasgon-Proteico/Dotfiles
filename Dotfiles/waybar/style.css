@@ -1,0 +1,121 @@
+/* ~/.config/waybar/style.css */
+/*toma en cuenta que pones "vim" antes del ~*/
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    font-weight: bold;
+    min-height: 0;
+    font-size: 14px;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "cv01", "cv02", "cv03", "cv04"';
+}
+window#waybar {
+    background: transparent;
+}
+#workspaces,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#memory,
+#cpu,
+#tray,
+#bluetooth,
+#appmenu,
+#backlight,
+#window {
+    background: #1e1e2e; /* Catppuccin Mocha Base */
+    color: #cdd6f4;      /* Catppuccin Mocha Text */
+    padding: 4px 10px;
+    margin: 3px 3px;
+}
+#workspaces button {
+    padding: 0px 5px;
+    background-color: transparent;
+    color: #45475a; /* Catppuccin Mocha Surface1 */
+    border-radius: 9px;
+}
+#workspaces button.active {
+    color: #a6e3a1; /* Catppuccin Mocha Green */
+}
+#workspaces button:hover {
+    background-color: #313244; /* Catppuccin Mocha Surface0 */
+    color: #cdd6f4;
+    border-radius: 9px;
+}
+#clock {
+    color: #fab387; /* Catppuccin Mocha Orange */
+    border-radius: 9px 0px 0px 9px;
+    margin-right: 0px;
+}
+#workspaces {
+    border-radius: 0px 9px 9px 0px;
+    margin-left: 0px;
+    padding-right: 15px;
+}
+#window {
+    border-radius: 20px;
+}
+#pulseaudio {
+    color: #89b4fa; /* Catppuccin Mocha Blue */
+    margin-right: 0px;
+    margin-left: 0px;
+}
+#network {
+    color: #f9e2af; /* Catppuccin Mocha Yellow */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#memory {
+    color: #cba6f7; /* Catppuccin Mocha Mauve */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#cpu {
+    color: #f38ba8; /* Catppuccin Mocha Red */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#battery {
+    color: #a6e3a1; /* Catppuccin Mocha Green */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#backlight {
+    color: #fab497; /* Catppuccin Mocha Orange */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#tray {
+    color: #b4befe; /* Catppuccin Mocha Lavender */
+    border-radius: 9px 0px 0px 9px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#bluetooth {
+    padding: 0 10px;
+    min-width: 20px;
+    margin-left: 0px;
+    margin-right: 10px;
+    border-radius: 0px 9px 9px 0px;
+
+}
+#bluetooth.on {
+    color: #89b4fa; /* Un color azul para indicar que está activo */
+}
+
+#bluetooth.connected {
+    color: #228B22; /* Un color verde para indicar conexión */
+}
+#bluetooth.off {
+    color: #6c7086; /* Un color gris para indicar que está inactivo */
+}
+#appmenu {
+    background-color: #3B4252;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#appmenu button:hover{
+  background-color: #4C566A;
+  color: #ECEFF4
+
+}
+
